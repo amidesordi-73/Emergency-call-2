@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>My Cup of T – Pannes FR → EN</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    :root {
+        --blue: #003b7a;
+        --red: #c8102e;
+        --green: #009e60;
+        --bg: #f4f6fb;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: var(--bg);
+        margin: 0;
+        padding: 0 0 20px 0;
+        color: #222;
+    }
+
+    header {
+        background: linear-gradient(90deg, var(--blue), var(--green));
+        color: #fff;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    }
+
+    .header-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .logo-theme {
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        background: #fff;
+        padding: 4px;
+        object-fit: contain;
+    }
+
+    .header-text span:first-child {
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    h1 {
+        text-align: center;
+        color: var(--blue);
+        margin: 18px 10px 4px 10px;
+        font-size: 22px;
+    }
+
+    .subtitle {
+        text-align: center;
+        font-size: 13px;
+        color: #555;
+        margin-bottom: 15px;
+    }
+
+    .container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    .box {
+        background: #ffffff;
+        padding: 18px;
+        border-radius: 12px;
+        width: 45%;
+        min-width: 320px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.12);
+        display: flex;
+        flex-direction: column;
+        max-height: 500px;
+        border-top: 4px solid var(--blue);
+    }
+
+    .box h2 {
+        margin: 0;
+        font-size: 17px;
+        color: var(--blue);
+    }
+
+    .scroll-area {
+        overflow-y: auto;
+        margin-top: 10px;
+        padding-right: 5px;
+    }
+
+    .phrase {
+        padding: 10px;
+        background: #e6efff;
+        border-radius: 8px;
+        margin: 6px 0;
+        cursor: grab;
+        font-size: 14px;
+        border-left: 4px solid var(--red);
+        transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    .phrase:hover {
+        transform: translateX(2px);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    }
+
+    .target {
+        padding: 12px;
+        border: 2px dashed var(--blue);
+        border-radius: 8px;
+        min-height: 40px;
+        margin: 6px 0;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        background: #f9fbff;
+        transition: background 0.2s, border-color 0.2s;
+    }
+
+    .target.correct {
+        background: #d7f6dd !important;
+        border-color: var(--green) !important;
+    }
+
+    .target.wrong {
+        background: #fde2e2 !important;
+        border-color: var(--red) !important;
+    }
+
+    .fr-text {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .separator {
+        text-align: center;
+        font-size: 18px;
+        margin: 4px 0 8px 0;
+        display: block;
+    }
+
+    .en-line {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        border-top: 1px dashed rgba(0,0,0,0.15);
+        padding-top: 6px;
+        margin-top: 4px;
+        width: 100%;
+    }
+
+    .en-text {
+        font-size: 13px;
+        display: block;
+        color: #03396c;
+        flex: 1;
+    }
+
+    .audio-btn {
+        border: none;
+        border-radius: 999px;
+        padding: 4px 10px;
+        font-size: 14px;
+        cursor: pointer;
+        background: rgba(0,59,122,0.07);
+        color: var(--blue);
+        flex-shrink: 0;
+    }
+
+    .audio-btn:hover {
+        background: rgba(0,59,122,0.15);
+    }
+
+    .buttons {
+        text-align: center;
+        margin-top: 18px;
+    }
+
+    button {
+        padding: 9px 18px;
+        background: var(--blue);
+        color: white;
+        border: none;
+        border-radius: 999px;
+        cursor: pointer;
+        font-size: 14px;
+        margin: 0 5px;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <div class="header-left">
+        <img src="img/mycup-sftrf.png" alt="My Cup of T & SFTRF" class="logo-theme">
+        <div class="header-text">
+            <span>MY CUP OF T</span><br>
+            <span>Atelier anglais – Pannes (FR → EN)</span>
+        </div>
+    </div>
+</header>
+
+<h1>Pannes – Associer les phrases françaises et anglaises</h1>
+<p class="subtitle">
+    Faites glisser chaque phrase <strong>française</strong> vers la bonne traduction <strong>anglaise</strong>, puis écoutez la prononciation UK 🔊.
+</p>
+
+<div class="container">
+    <div class="box">
+        <h2>🇫🇷 Phrases françaises</h2>
+        <div id="phrasesContainer" class="scroll-area"></div>
+    </div>
+
+    <div class="box">
+        <h2>🇬🇧 Traductions anglaises</h2>
+        <div id="targetsContainer" class="scroll-area"></div>
+    </div>
+</div>
+
+<div class="buttons">
+    <button onclick="location.reload()">🔁 Réinitialiser</button>
+    <button onclick="window.location.href='index.html'">⬅ Retour à l'index</button>
+</div>
+
+<script>
+    // FR = colonne gauche, EN = colonne droite
+    const data = [
+        ["p1", "Ma voiture est tombée en panne", "My car has broken down"],
+        ["p2", "Quel est le problème avec votre voiture ?", "What’s the matter / problem with your car?"],
+        ["p3", "Où se trouve précisément votre véhicule ?", "Where exactly is your vehicle?"],
+        ["p4", "Un refuge", "An emergency layby"],
+        ["p5", "Êtes-vous garé dans le refuge ?", "Are you parked in the emergency layby?"],
+        ["p6", "Je suis garé à côté de la borne d’appel", "I’m parked next to the emergency phone"],
+        ["p7", "Êtes-vous garé sur la bande d’urgence ?", "Are you parked on the hard shoulder?"],
+        ["p8", "Sur la voie gauche", "On the left-hand lane"],
+        ["p9", "Êtes-vous garé à côté de la route ?", "Are you parked by the side of the road?"],
+        ["p10", "C’est bien, je sais où vous êtes", "It’s ok, I know where you are"],
+        ["p11", "Est-ce que vous gênez la circulation ?", "Are you holding up the traffic?"],
+        ["p12", "Vos warnings", "Your warning lights"],
+        ["p13", "Avez-vous mis vos warnings ?", "Have you put on your warning lights?"],
+        ["p14", "Ne bougez pas", "Don’t move"],
+        ["p15", "La patrouille de sécurité va passer pour assurer votre sécurité", "The safety patrol will stop to ensure your safety"],
+        ["p16", "Attendez la patrouille de sécurité", "Wait for the safety patrol (to arrive)"],
+        ["p17", "La glissière de sécurité", "The safety barrier"],
+        ["p18", "Vous devez vous mettre derrière la glissière de sécurité", "You must get behind the safety barrier"],
+        ["p19", "Un dépanneur", "A breakdown mechanic"],
+        ["p20", "Une dépanneuse", "A breakdown lorry / truck"],
+        ["p21", "Je vais appeler un dépanneur", "I’ll call / phone / ring a breakdown mechanic"],
+        ["p22", "Une dépanneuse va emmener votre voiture au garage", "A breakdown truck / lorry will take your car to the garage"],
+        ["p23", "Combien de temps est-ce que ça prendra ?", "How long will it take?"],
+        ["p24", "À peu près vingt minutes", "About twenty minutes"]
+    ];
+
+    function shuffle(arr) {
+        const a = [...arr];
+        for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+    }
+
+    const phrasesContainer = document.getElementById("phrasesContainer");
+    const targetsContainer = document.getElementById("targetsContainer");
+
+    // FR à gauche (draggable)
+    shuffle(data).forEach(([id, fr, en]) => {
+        const div = document.createElement("div");
+        div.className = "phrase";
+        div.draggable = true;
+        div.id = id;
+        div.textContent = fr;
+        phrasesContainer.appendChild(div);
+    });
+
+    // EN à droite (cibles)
+    shuffle(data).forEach(([id, fr, en]) => {
+        const div = document.createElement("div");
+        div.className = "target";
+        div.dataset.match = id;
+        div.dataset.en = en;
+        div.textContent = en;
+        targetsContainer.appendChild(div);
+    });
+
+    let dragged = null;
+
+    document.addEventListener("dragstart", e => {
+        if (e.target.classList.contains("phrase")) {
+            dragged = e.target;
+        }
+    });
+
+    document.addEventListener("dragover", e => {
+        if (e.target.classList.contains("target")) e.preventDefault();
+    });
+
+    document.addEventListener("drop", e => {
+        if (e.target.classList.contains("target") && dragged) {
+
+            if (e.target.classList.contains("correct")) return;
+
+            if (e.target.dataset.match === dragged.id) {
+                e.target.classList.add("correct");
+
+                const french = dragged.textContent;
+                const english = e.target.dataset.en;
+
+                e.target.innerHTML = `
+                    <span class="fr-text">${french}</span>
+                    <span class="separator">🇫🇷 → 🇬🇧</span>
+                    <div class="en-line">
+                        <span class="en-text">${english}</span>
+                        <button type="button" class="audio-btn" data-en="${english}">🔊</button>
+                    </div>
+                `;
+
+                dragged.style.transition = "0.3s";
+                dragged.style.opacity = "0";
+                setTimeout(() => dragged.remove(), 300);
+
+            } else {
+                e.target.classList.add("wrong");
+                setTimeout(() => e.target.classList.remove("wrong"), 700);
+            }
+        }
+    });
+
+    // Prononciation UK
+    function playEnglish(text) {
+        if (!('speechSynthesis' in window)) {
+            alert("La synthèse vocale n'est pas supportée sur ce navigateur.");
+            return;
+        }
+        const utter = new SpeechSynthesisUtterance(text);
+        utter.lang = "en-GB";
+
+        const voices = window.speechSynthesis.getVoices();
+        const ukVoice = voices.find(v => v.lang === "en-GB" || v.lang.startsWith("en-GB"));
+        if (ukVoice) {
+            utter.voice = ukVoice;
+        }
+
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utter);
+    }
+
+    document.addEventListener("click", e => {
+        if (e.target.classList.contains("audio-btn")) {
+            playEnglish(e.target.dataset.en);
+        }
+    });
+
+    if (typeof speechSynthesis !== "undefined") {
+        speechSynthesis.onvoiceschanged = () => {};
+    }
+</script>
+
+</body>
+</html>
