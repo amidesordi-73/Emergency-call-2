@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>My Cup of T – SFTRF – Index Pannes</title>
+<title>My Cup of T – Breakdowns – Index</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
     :root {
@@ -14,19 +14,27 @@
 
     body {
         font-family: Arial, sans-serif;
-        margin: 0;
         background: var(--bg);
+        margin: 0;
+        padding: 0 0 30px 0;
         color: #222;
     }
 
     header {
         background: linear-gradient(90deg, var(--blue), var(--green));
         color: #fff;
-        padding: 12px 20px;
+        padding: 10px 20px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         gap: 15px;
         box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    }
+
+    .header-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
     }
 
     .logo-theme {
@@ -39,121 +47,177 @@
     }
 
     .header-text span:first-child {
-        font-size: 22px;
+        font-size: 20px;
         font-weight: bold;
         letter-spacing: 1px;
+        display: block;
     }
 
-    main {
-        max-width: 900px;
-        margin: 20px auto;
-        padding: 0 15px;
+    .header-text span:nth-child(2) {
+        display: block;
+        font-size: 13px;
+    }
+
+    .header-text h3 {
+        margin: 4px 0 0 0;
+        font-size: 15px;
+        font-weight: normal;
     }
 
     h1 {
         text-align: center;
         color: var(--blue);
-        margin-bottom: 8px;
+        margin: 20px 10px 8px 10px;
+        font-size: 24px;
     }
 
-    p.subtitle {
-        text-align: center;
-        font-size: 13px;
-        color: #555;
-        margin-bottom: 20px;
+    .intro {
+        max-width: 800px;
+        margin: 0 auto 20px auto;
+        font-size: 14px;
+        line-height: 1.6;
+        padding: 0 15px;
+    }
+
+    .intro strong {
+        color: var(--blue);
     }
 
     .cards {
+        max-width: 900px;
+        margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 18px;
+        padding: 0 15px;
     }
 
     .card {
-        background: #fff;
+        background: #ffffff;
         border-radius: 12px;
-        padding: 16px;
-        box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        padding: 16px 18px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.10);
         border-top: 4px solid var(--blue);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        min-height: 170px;
     }
 
     .card h2 {
-        font-size: 17px;
-        margin: 0 0 6px 0;
+        margin: 0 0 8px 0;
+        font-size: 18px;
         color: var(--blue);
     }
 
     .card p {
+        margin: 4px 0 10px 0;
         font-size: 13px;
-        margin: 0 0 10px 0;
-        color: #555;
     }
 
-    .card span.tag {
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        color: var(--red);
-    }
-
-    .card a {
-        margin-top: 8px;
-        align-self: flex-start;
-        text-decoration: none;
-        padding: 8px 14px;
+    .btn {
+        display: inline-block;
+        padding: 9px 16px;
         border-radius: 999px;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        text-decoration: none;
+        text-align: center;
         background: var(--blue);
         color: #fff;
-        font-size: 13px;
+        margin-top: auto;
+        width: fit-content;
     }
 
-    .card a:hover {
-        opacity: 0.9;
+    .btn.secondary {
+        background: var(--green);
+    }
+
+    .tips {
+        max-width: 800px;
+        margin: 22px auto 0 auto;
+        font-size: 13px;
+        padding: 10px 15px 0 15px;
+        border-top: 1px dashed rgba(0,0,0,0.15);
+        color: #444;
+    }
+
+    .tips ul {
+        padding-left: 18px;
+        margin: 6px 0 0 0;
     }
 </style>
 </head>
 <body>
 
 <header>
-    <img src="img/mycup-sftrf.png" alt="My Cup of T & SFTRF" class="logo-theme">
-    <div class="header-text">
-        <span>MY CUP OF T – SFTRF</span><br>
-        <span>Ateliers d’anglais – Pannes & Sécurité</span>
+    <div class="header-left">
+        <img src="img/mycup-sftrf.png" alt="My Cup of T & SFTRF" class="logo-theme">
+        <div class="header-text">
+            <span>MY CUP OF T</span>
+            <span>Atelier anglais – Vocabulaire sécurité & panne</span>
+            <h3>Emergency calls – index</h3>
+        </div>
     </div>
 </header>
 
-<main>
-    <h1>Choisissez votre activité – Pannes</h1>
-    <p class="subtitle">
-        Cliquez sur une carte pour lancer l’exercice interactif (drag & drop + prononciation UK).
+<h1>Breakdowns – Activités interactives</h1>
+
+<div class="intro">
+    <p>
+        Cet espace vous permet de <strong>réviser le vocabulaire des appels d’urgence</strong> en anglais
+        à partir de phrases en situation de <strong>panne sur la route</strong>.
     </p>
+    <p>Vous disposez de :</p>
+    <ul>
+        <li><strong>Exercice 1</strong> : associer des phrases <strong>françaises</strong> avec leur traduction <strong>anglaise</strong>.</li>
+        <li><strong>Exercice 2</strong> : associer des phrases <strong>anglaises</strong> avec leur traduction <strong>anglaise</strong>.</li>
+        <li><strong>Mode test</strong> : phrases <strong>FR → EN</strong> avec un <strong>score final</strong>.</li>
+    </ul>
+</div>
 
-    <div class="cards">
-        <div class="card">
-            <span class="tag">Panne – FR → EN</span>
-            <h2>Pannes – Phrases types (FR → EN)</h2>
-            <p>Associer les phrases françaises aux phrases anglaises sur les pannes de véhicule.</p>
-            <a href="panne.html">Ouvrir l’exercice</a>
-        </div>
-
-        <div class="card">
-            <span class="tag">Panne – EN → FR</span>
-            <h2>Pannes – Version inversée (EN → FR)</h2>
-            <p>Partir des phrases anglaises pour retrouver les équivalents français.</p>
-            <a href="panne_en_fr.html">Ouvrir l’exercice</a>
-        </div>
-
-        <div class="card">
-            <span class="tag">Panne – TEST</span>
-            <h2>Test vocabulaire Pannes</h2>
-            <p>Petit test de vocabulaire sur les pannes pour vérifier les acquis.</p>
-            <a href="panne_test.html">Ouvrir le test</a>
-        </div>
+<div class="cards">
+    <div class="card">
+        <h2>Exercice 1 – FR 👉 EN</h2>
+        <p>
+            Faire glisser chaque phrase <strong>en français</strong> (colonne de gauche) vers la traduction
+            <strong>en anglais</strong> (colonne de droite), sur le thème des pannes.  
+            Vous verrez immédiatement si l'association est correcte et vous pourrez écouter la prononciation UK 🔊.
+        </p>
+        <a href="panne.html" class="btn">Lancer l’exercice 1</a>
     </div>
-</main>
+
+    <div class="card">
+        <h2>Exercice 2 – EN 👉 FR</h2>
+        <p>
+            Faire glisser chaque phrase <strong>en anglais</strong> vers la bonne traduction
+            <strong>en français</strong>.  
+            Vous vous habituez à reconnaître et comprendre les expressions utilisées lors d’une panne.
+        </p>
+        <a href="panne_en_fr.html" class="btn">Lancer l’exercice 2</a>
+    </div>
+
+    <div class="card">
+        <h2>Mode test – FR 👉 EN</h2>
+        <p>
+            Reprendre les phrases <strong>françaises vers anglais</strong>, mais cette fois
+            vous n’avez la correction qu’à la fin.  
+            Un score final vous indiquera votre niveau de réussite sur le vocabulaire des pannes.
+        </p>
+        <a href="panne_test.html" class="btn secondary">Lancer le mode test</a>
+    </div>
+</div>
+
+<div class="tips">
+    <p><strong>Comment faire les exercices ?</strong></p>
+    <ul>
+        <li>Lire la phrase de la colonne de gauche.</li>
+        <li>Maintenir le clic gauche sur la phrase, la déplacer jusqu’à la bonne traduction, puis relâcher.</li>
+        <li>Cliquer sur 🔊 pour écouter la phrase en anglais avec une prononciation britannique (dans les exercices 1 et 2).</li>
+        <li>Utiliser le bouton <strong>Réinitialiser</strong> dans chaque page pour recommencer.</li>
+    </ul>
+</div>
 
 </body>
 </html>
